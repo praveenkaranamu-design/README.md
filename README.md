@@ -843,7 +843,139 @@ void main() {
 ```
 Balance: 1000.0
 ```
+## 7. Null Safety In Dart
 
+### Overview 
+Null safety in Dart ensures that variables cannot contain null unless explicitly allowed. This helps prevent runtime errors caused by unexpected null values.
+
+### Key Concepts
+- **Non-nullable types**: Cannot be null.
+- **Nullable types**: Can be null, declared with ?.
+- **Null-aware operators**: Help handle nulls safely (??, ?., ??=).
+- **Sound null safety**: Guarantees at compile time that non-nullable variables are never null.
+
+ ### 10 Examples For Null Safety In Dart
+ ### Example 1: Normal variable (non-nullable)
+ ```dart
+void main() {
+  String name = "Praveen";
+  print(name);
+}
+```
+**Output:**
+```
+Praveen
+```
+### Example 2: Nullable variable (?)
+```dart
+void main() {
+  String? city;
+  print(city);
+}
+```
+**Output:**
+```
+null
+```
+### Example 3: Assigning null to nullable variable
+```dart
+void main() {
+  int? age = null;
+  print(age);
+}
+```
+**Output:**
+```
+null
+```
+### Example 4: Trying to assign null to non-nullable variable (❌ Error)
+```dart
+void main() {
+  int age = null; // ❌ Error
+  print(age);
+}
+```
+**Output:**
+```
+Error: A value of type 'Null' can't be assigned to a variable of type 'int'.
+```
+### Example 5: Null check before using variable
+```dart
+void main() {
+  String? name;
+  
+  if (name != null) {
+    print(name.toUpperCase());
+  } else {
+    print("Name is null");
+  }
+}
+```
+**Output:**
+```
+Name is null
+```
+### Example 6: Using the null-aware operator (?.)
+```dart
+void main() {
+  String? city;
+  print(city?.toUpperCase());
+}
+```
+**Output:**
+```
+null
+```
+### Example 7: Using the null-coalescing operator (??)
+```dart
+void main() {
+  String? name;
+  print(name ?? "Guest");
+}
+```
+**Output:**
+```
+Guest
+```
+### Example 8: Using the null-assertion operator (!)
+```dart
+void main() {
+  String? name = "Dart";
+  print(name!.toUpperCase());
+}
+```
+**Output:**
+```
+DART
+```
+### Example 9: Late variable (initialized later)
+```dart
+void main() {
+  late String greeting;
+  greeting = "Hello!";
+  print(greeting);
+}
+```
+**Output:**
+```
+Hello!
+```
+### Example 10: Combining everything
+```dart
+void main() {
+  String? name;
+  String message = "Hello, " + (name ?? "Guest");
+  print(message);
+}
+```
+**Output:**
+```
+Hello, Guest
+```
+
+
+
+ 
 
 
 
