@@ -846,13 +846,13 @@ Balance: 1000.0
 ## 7. Null Safety In Dart
 
 ### Overview 
-Null safety in Dart ensures that variables cannot contain null unless explicitly allowed. This helps prevent runtime errors caused by unexpected null values.
+Null safety in Dart prevents null-related runtime errors by ensuring variables are non-nullable by default. Developers must explicitly declare nullable types, making code safer and more predictable.
 
 ### Key Concepts
-- **Non-nullable types**: Cannot be null.
-- **Nullable types**: Can be null, declared with ?.
-- **Null-aware operators**: Help handle nulls safely (??, ?., ??=).
-- **Sound null safety**: Guarantees at compile time that non-nullable variables are never null.
+- **Non-nullable types**: Always hold a valid value and never null.
+- **Nullable types**: Always hold a valid value and never null.
+- **Null-aware operators**: Special operators like ??, ?., and ??= make working with nulls safer and cleaner.
+- **Sound null safety**: Ensures at compile time that null errors are detected before the program runs.
 
  ### 10 Examples For Null Safety In Dart
  ### Example 1: Normal variable (non-nullable)
