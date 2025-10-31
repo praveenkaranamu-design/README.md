@@ -7,6 +7,7 @@
 4. [Collections in Dart](#4-collections-in-dart)
 5. [File Handling in Dart](#5-file-handling-in-dart)
 6. [OOP in Dart](#6-oop-in-dart)
+7. [Null Safety In Dart](#7-Null-Safety-In-Dart)
 
 ## 1. Introduction and Basics
 Dart is a programming language developed by Google, used for building mobile, web, and desktop applications. It is object-oriented and easy to learn, making it beginner-friendly. Dart supports both Ahead-of-Time (AOT) and Just-in-Time (JIT) compilation, which helps improve performance and development speed. It is mainly used with the Flutter framework to create modern and high-performance applications.
